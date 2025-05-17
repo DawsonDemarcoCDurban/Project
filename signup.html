@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>To Eface The Stars</title>
+    </head>
+<body class="body5">
+    <div class="lelink">
+        <a class="Link5" href="index.html">Back to Home</a>
+    </div>
+    <div class="container">
+    <h1>To Efface The Stars <img src="images/tetslogo.jpg" style="height: 40px; vertical-align: middle;"></h1>
+    <p class="tagline">Join the movement against light pollution!</p>
+
+    <form id="signupForm">
+      <label>First Name * <input type="text" id="firstName" required></label>
+      <label>Last Name * <input type="text" id="lastName" required></label>
+
+      <fieldset>
+        <legend>Sex *</legend>
+        <label><input type="radio" name="sex" value="Male" required> Male</label>
+        <label><input type="radio" name="sex" value="Female"> Female</label>
+        <label><input type="radio" name="sex" value="Prefer not to say"> Prefer not to say</label>
+      </fieldset>
+
+      <label>Email Address * <input type="email" id="email" required></label>
+      <label>Password * <input type="password" id="password" required></label>
+      <label>Contact Number <input type="text" id="contact"></label>
+
+      <label>Why you're supporting our campaign *
+        <textarea id="why" required></textarea>
+      </label>
+
+      <button type="submit">Join the Cause</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

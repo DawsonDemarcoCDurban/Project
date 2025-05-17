@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>To Eface The Stars</title>
+    </head>
+    <body class="body4">
+        <div class="lelink">
+            <a href="index.html">Back to Home</a>
+        </div>
+        <div class="quiz-container">
+            <h1>Light Pollution Quiz</h1>
+            <div id="quiz">
+                <p id="question" class="question"></p>
+                <div id="options" class="options"></div>
+                <button id="next-btn" class="hidden">Next</button>
+            </div>
+            <div id="result" class="hidden">
+                <h2>Quiz Completed!</h2>
+                <p id="score"></p>
+                <button onclick="restartQuiz()">Restart Quiz</button>
+            </div>
+        </div>
+        <script>
+            const quizData = [
+            { question: "What is light pollution?", options: ["Excessive artificial light", "Lack of street lights", "Natural brightness", "None of the above"], answer: 0 },
+            { question: "Which type of light pollution affects astronomers the most?", options: ["Glare", "Skyglow", "Light trespass", "None"], answer: 1 },
+            { question: "What is a common way to reduce light pollution?", options: ["Using LED bulbs", "Keeping lights on all night", "Increasing street lights", "Blocking the sky"], answer: 0 },
+            { question: "Which organization studies light pollution?", options: ["NASA", "International Dark-Sky Association", "WHO", "NOAA"], answer: 1 },
+            { question: "Which animal is affected by light pollution?", options: ["Turtles", "Eagles", "Sharks", "Elephants"], answer: 0 },
+            { question: "What is the main cause of light pollution?", options: ["Street lights", "Billboards and advertising", "Overuse of artificial light", "Car headlights"], answer: 2 },
+            { question: "How does light pollution affect human health?", options: ["Causes eye irritation", "Disrupts sleep cycles", "Increases skin cancer risk", "Improves night vision"], answer: 1 },
+            { question: "Which type of lighting is best to reduce light pollution?", options: ["Cool white LED", "Incandescent bulbs", "Shielded warm lighting", "Fluorescent lights"], answer: 2 },
+            { question: "Which of these is a consequence of light pollution?", options: ["More visible stars", "Confused migratory birds", "Healthier ecosystems", "Stronger moonlight"], answer: 1 },
+            { question: "What is a dark-sky reserve?", options: ["An area with minimal artificial light", "A place with no street lights", "A location only for astronomers", "A zone where light pollution is ignored"], answer: 0 }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        const questionEl = document.getElementById("question");
+        const optionsEl = document.getElementById("options");
+        const nextBtn = document.getElementById("next-btn");
+        const resultEl = document.getElementById("result");
+        const scoreEl = document.getElementById("score");
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            questionEl.textContent = q.question;
+            optionsEl.innerHTML = "";
+            nextBtn.classList.add("hidden", "disabled");
+            nextBtn.disabled = true;
+            
+            q.options.forEach((option, index) => {
+                const btn = document.createElement("button");
+                btn.textContent = option;
+                btn.onclick = () => checkAnswer(index, btn);
+                optionsEl.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIndex, button) {
+            const correctIndex = quizData[currentQuestion].answer;
+            if (selectedIndex === correctIndex) {
+                button.classList.add("correct");
+                score++;
+            } else {
+                button.classList.add("wrong");
+            }
+            document.querySelectorAll(".options button").forEach(btn => btn.disabled = true);
+            nextBtn.classList.remove("hidden", "disabled");
+            nextBtn.disabled = false;
+        }
+
+        nextBtn.addEventListener("click", () => {
+            if (!nextBtn.disabled) {
+                currentQuestion++;
+                if (currentQuestion < quizData.length) {
+                    loadQuestion();
+                } else {
+                    showResults();
+                }
+            }
+        });
+
+        function showResults() {
+            document.getElementById("quiz").classList.add("hidden");
+            resultEl.classList.remove("hidden");
+            scoreEl.textContent = `You scored ${score} out of ${quizData.length}!`;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            resultEl.classList.add("hidden");
+            document.getElementById("quiz").classList.remove("hidden");
+            loadQuestion();
+        }
+
+        loadQuestion();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+body.body1{
+    background-image: url(images/citylightpol.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+}
+body.body2{
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+}
+body.body3{
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+}
+body.body4{
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 20px;
+}
+body.body5{
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 20px;
+}
+body.body6{
+    background-image: url(images/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 20px;
+}
+h1{
+    font-family:'Montserrat', sans-serif;
+    color:yellow;
+    text-align:center;
+}
+h2{
+    font-family:'Montserrat', sans-serif;
+    color:yellow;
+    text-align:center;
+    margin-bottom:5px;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+    color:white;
+    text-align: justify;
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+a{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color:yellow;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+.lelinks {
+    text-align: center;
+    margin-top: 20px;
+}
+.lelinks a{
+    display: inline-block;
+    margin: 0 7px;
+}
+a:hover{
+    background-color: yellow;
+    color:black;
+}
+a:active{
+    background-color:white;
+    color:black;
+}
+.imageone {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imageone img {
+    max-width: 20%; 
+    height: auto; 
+}
+figcaption{
+    color:white;
+    font-family:'Montserrat', sans-serif;
+}
+.imagetwo {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagetwo img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imagethree {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagethree img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imagefour {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagefour img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imagefive {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagefive img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imagesix {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagesix img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imageseven {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imageseven img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imageeight {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imageeight img {
+    max-width: 30%; 
+    height: auto; 
+}
+.imagenine {
+    text-align: center;
+    margin-top: 20px; 
+}
+.imagenine img {
+    max-width: 30%; 
+    height: auto; 
+}
+iframe {
+    display: block; 
+    margin: 20px auto 0; 
+    width: 40%; 
+    aspect-ratio: 16 / 9; 
+    height: auto; 
+    border: 0; 
+  }
+  
+.sprite { 
+    background: url('maxresdefault.jpg') no-repeat 0px 0px; 
+    height: 150px; 
+    width: 150px; 
+    animation: varName 1s steps(4) infinite;
+} 
+
+@keyframes varName { 
+    from {background-position-x:0px;} 
+    to {background-position-x:-450px;}
+}
+.quiz-container {
+    max-width: 500px; 
+    margin: auto; 
+}
+.question { 
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+.options button { 
+    display: block; 
+    width: 100%; 
+    padding: 10px; 
+    margin: 5px 0; 
+    cursor: pointer; 
+}
+.correct { 
+    background-color: lightgreen; 
+}
+.wrong { 
+    background-color: lightcoral; 
+}
+.hidden { 
+    display: none; 
+}
+.disabled { 
+    background-color: gray; cursor: not-allowed; 
+}
+.container {
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}  
+h1{
+    text-align: center;
+    color: #4CAF50;
+}  
+.tagline {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}  
+form label, fieldset {
+    display: block;
+    margin-bottom: 15px;
+} 
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}  
+button:hover {
+    background-color: #45a049;
+}  
+.profile-info p {
+    margin: 10px 0;
+}
+label{
+    color:white;
+    font-family:'Montserrat', sans-serif;
+}
+fieldset{
+    color:white;
+    font-family:'Montserrat', sans-serif;
+}
